@@ -1,0 +1,11 @@
+[Unit]
+Description=Establish PipeWire link between source and sink
+After=pipewire.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/setup_pipewire_link.sh
+
+[Install]
+WantedBy=default.target
+
